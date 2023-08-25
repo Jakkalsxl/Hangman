@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 2;
 }
 
-.App-link {
-  color: #61dafb;
+.top-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
+.top-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.top-grid-left button {
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 30pt ;
+}
+
+.top-grid-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 100pt;
+  font-size: 30pt ;
+}
+
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+}
+
+.image-container {
+  margin-right: 20px;
+}
+
+img{
+  margin-right: 100pt;
+}
+
+.alphabet-container {
+  display: flex;
+  align-items: center;
+  margin-top: 110pt;
+}
+
+.alphabet-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.alphabet-button {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hangmanWord{
+  margin-top: 80pt;
+  margin-left: 310pt;
+  margin-right:0;
+  margin-bottom:-70pt;
+  font-size: 40pt ;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.wrongGuesses{
+  font-size: 15pt ;
+}
+
+.alphabet-button.correct {
+  background-color: rgb(86, 242, 86);
+}
+
+.alphabet-button.wrong {
+  background-color: rgb(255, 0, 0);
+}
+
+.pictureToShow{
+  margin-bottom: 150pt;
+}
+
+.winLoseText{
+  margin-top: 20pt;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 30pt ;
+}
+
+.helpButton{
+  position: absolute;
+  font-size: 20pt !important;
+  margin-left: -96pt;
+  margin-top: 100pt;
+  border: none;
+  border-radius: -10pt;
+  padding: 10pt;
+  background-color: rgb(180, 255, 250);
+}
+
+.helpText {
+  margin-top: 100pt;
+  width: 250pt;
+  position: absolute;
+  margin-left: -270pt;
+  background-color: #f2f2f2;
+}
+
+.helpText.fade-in {
+  margin-top: 100pt;
+  width: 250pt;
+  animation: shiftFadeIn 1s forwards;
+  animation-fill-mode: forwards;
+}
+
+.helpText.fade-out {
+  margin-top: 100pt;
+  width: 250pt;
+  animation: shiftFadeOut 1s forwards;
+  animation-fill-mode: forwards;
+}
+
+.helpText ul li{
+  font-size: 15pt !important;
+  list-style: none;
+  padding: 10pt;
+}
+
+@keyframes shiftFadeIn {
   from {
-    transform: rotate(0deg);
+    margin-left: -270pt;
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    margin-left: -37pt;
+    opacity: 1;
+  }
+}
+
+@keyframes shiftFadeOut {
+  from {
+    margin-left: -37pt;
+    opacity: 1;
+  }
+  to {
+    margin-left: -270pt;
+    opacity: 0;
   }
 }
