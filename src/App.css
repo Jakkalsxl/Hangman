@@ -6,6 +6,7 @@ body {
   margin: 0;
 }
 
+/* Header styles */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -43,6 +44,7 @@ body {
   font-size: 30pt ;
 }
 
+/* Page styles */
 .content-container {
   display: flex;
   align-items: flex-start;
@@ -58,6 +60,7 @@ img{
   margin-right: 100pt;
 }
 
+/* keyboard creation */
 .alphabet-container {
   display: flex;
   align-items: center;
@@ -112,6 +115,7 @@ img{
   font-size: 30pt ;
 }
 
+/* help button text and animation */
 .helpButton{
   position: absolute;
   font-size: 20pt !important;
