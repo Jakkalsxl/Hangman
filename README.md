@@ -7,7 +7,6 @@ Welcome to the Hangman React App! This is a classic word-guessing game where you
 1. Guess one letter at a time to reveal the secret word.
 2. Each incorrect guess adds another part to the hangman. You have a total of 7 incorrect guesses.
 3. Your goal is to guess the entire word before the hangman is fully drawn.
-4. Rack up more points than your opponent after 3 rounds to win the game!
 
 ## Installation
 
